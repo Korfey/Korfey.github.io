@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Конфиденциальность — Витраж (Vitrage)</title>
+  <meta name="description" content="Политика конфиденциальности Витража (Vitrage): какие данные YouTube и Twitch использует программа и где они хранятся.">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="logo.svg" alt="">Витраж</a>
+      <nav>
+        <a href="#ru">Русский</a>
+        <a href="#en">English</a>
+        <a href="./">Главная / Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <main>
+      <section id="ru" lang="ru">
+        <h1>Политика конфиденциальности</h1>
+        <p class="muted">Действует с 29 октября 2026 года.</p>
+
+        <div class="card">
+          <strong>Коротко.</strong> У Витража нет своего сервера. Программа работает на вашем компьютере и обменивается данными только с YouTube (Google), Twitch, вашим OBS и GitHub (проверка обновлений). Автор Витража не получает ваши данные. Витраж не продаёт данные, не показывает рекламу и ничего не отслеживает.
+        </div>
+
+        <h2>Какие данные Google и YouTube использует Витраж</h2>
+        <p>Когда вы нажимаете «Войти в YouTube», Google спрашивает ваше согласие на одно разрешение: <code>youtube.force-ssl</code> («просмотр, изменение и безвозвратное удаление видео, оценок, комментариев и субтитров YouTube»). Google не даёт более узкого разрешения для чата трансляций. С этим разрешением Витраж получает:</p>
+        <ul>
+          <li>идентификатор и название вашего канала;</li>
+          <li>сведения о ваших текущих трансляциях, только чтобы найти их чат;</li>
+          <li>сообщения чата ваших трансляций: текст, имя и картинку профиля автора, его роль (владелец, модератор, спонсор), суперчаты и подобные события.</li>
+        </ul>
+        <p>Витраж не читает и не меняет ваши видео, оценки, комментарии к видео и субтитры. Он не видит ваш пароль Google, почту, контакты и другие сервисы Google.</p>
+
+        <h2>Как Витраж использует эти данные</h2>
+        <ul>
+          <li>Показывает чат в окне Витража и на оверлее в OBS.</li>
+          <li>Отправляет в чат сообщения, которые вы сами пишете в окне Витража.</li>
+          <li>Удаляет сообщения, даёт тайм-аут и бан, только когда вы сами нажимаете эти кнопки.</li>
+        </ul>
+        <p>Витраж не использует данные для рекламы, не продаёт их, не передаёт для обучения моделей искусственного интеллекта и не использует ни для чего, кроме перечисленного.</p>
+
+        <h2>Где хранятся данные</h2>
+        <p>Всё хранится только на вашем компьютере, в папке <code>data</code> рядом с программой (или в <code>%LOCALAPPDATA%\Vitrage</code>):</p>
+        <ul>
+          <li><strong>Ключи входа</strong> YouTube и Twitch зашифрованы средствами Windows (DPAPI). Расшифровать их может только ваша учётная запись Windows на этом компьютере. Ключи никогда не пишутся в журналы.</li>
+          <li><strong>История чата:</strong> последние 500 сообщений, чтобы чат не пропадал после перезапуска.</li>
+          <li><strong>Картинки</strong> (эмодзи, значки, картинки профиля) кэшируются, чтобы не скачивать их повторно.</li>
+          <li><strong>Технические журналы</strong> могут содержать название канала и имена пользователей, но не тексты сообщений и не ключи.</li>
+        </ul>
+
+        <h2>Кому передаются данные</h2>
+        <p>Никому, кроме самих YouTube и Twitch: Витраж отправляет им только то, что нужно для действий выше. Оверлей чата получает сообщения от Витража напрямую на вашем компьютере (адрес 127.0.0.1) и ничего не отправляет в интернет. Камера используется только для предпросмотра на вашем экране и никуда не передаётся.</p>
+
+        <h2>Как удалить данные и отозвать доступ</h2>
+        <ul>
+          <li>Кнопка «Выйти» на странице «Чат» отзывает доступ у Google или Twitch и удаляет ключи с компьютера.</li>
+          <li>Отозвать доступ можно и без Витража: на странице <a href="https://myaccount.google.com/connections">Сторонние приложения и сервисы</a> аккаунта Google или в <a href="https://www.twitch.tv/settings/connections">настройках подключений Twitch</a>.</li>
+          <li>Удаление папки <code>data</code> стирает всё, что Витраж сохранил.</li>
+        </ul>
+
+        <h2>Сервисы YouTube и Google</h2>
+        <p>Витраж использует API-сервисы YouTube. Используя вход в YouTube в Витраже, вы соглашаетесь с <a href="https://www.youtube.com/t/terms">Условиями использования YouTube</a>. Данные, которые обрабатывает Google, подчиняются <a href="https://policies.google.com/privacy">Политике конфиденциальности Google</a>.</p>
+        <p>Использование Витражом информации, полученной через API Google, и её передача в другие приложения соответствуют <a href="https://developers.google.com/terms/api-services-user-data-policy">Правилам использования пользовательских данных в сервисах Google API</a>, включая требования ограниченного использования (Limited Use).</p>
+
+        <h2>Дети</h2>
+        <p>Витраж не предназначен для детей младше 13 лет и сознательно не собирает их данные.</p>
+
+        <h2>Изменения и контакты</h2>
+        <p>При изменении политики новая версия появится на этой странице с новой датой. Вопросы: <a href="mailto:madenovartur@gmail.com">madenovartur@gmail.com</a>.</p>
+      </section>
+
+      <section id="en" lang="en">
+        <h1>Privacy Policy</h1>
+        <p class="muted">Effective October 29, 2026.</p>
+
+        <div class="card">
+          <strong>In short.</strong> Vitrage («Витраж») has no server of its own. It runs on your computer and talks only to YouTube (Google), Twitch, your OBS and GitHub (to check for updates). The author of Vitrage never receives your data. Vitrage does not sell data, show ads or track you.
+        </div>
+
+        <h2>What Google and YouTube data Vitrage uses</h2>
+        <p>When you press «Войти в YouTube» (Log in to YouTube), Google asks you to approve one permission: <code>youtube.force-ssl</code> («See, edit, and permanently delete your YouTube videos, ratings, comments and captions»). Google offers no narrower permission for live chat. With it, Vitrage receives:</p>
+        <ul>
+          <li>your channel's ID and name;</li>
+          <li>details of your current live broadcasts, only to find their chat;</li>
+          <li>your broadcasts' chat messages: the text, the author's name and profile picture, their role (owner, moderator, member), Super Chats and similar events.</li>
+        </ul>
+        <p>Vitrage does not read or change your videos, ratings, video comments or captions. It never sees your Google password, email, contacts or any other Google service.</p>
+
+        <h2>How Vitrage uses this data</h2>
+        <ul>
+          <li>It shows the chat in Vitrage's window and on the OBS overlay.</li>
+          <li>It sends the messages you type in Vitrage's window to your chat.</li>
+          <li>It deletes messages, times out and bans chatters only when you press those buttons yourself.</li>
+        </ul>
+        <p>Vitrage does not use this data for advertising, does not sell it, does not use it to train artificial intelligence models, and does not use it for anything other than the above.</p>
+
+        <h2>Where the data is stored</h2>
+        <p>Everything stays on your computer, in the <code>data</code> folder next to the program (or in <code>%LOCALAPPDATA%\Vitrage</code>):</p>
+        <ul>
+          <li><strong>Login keys</strong> for YouTube and Twitch are encrypted with Windows DPAPI. Only your Windows account on this computer can decrypt them. They are never written to logs.</li>
+          <li><strong>Chat history:</strong> the last 500 messages, so the chat survives a restart.</li>
+          <li><strong>Pictures</strong> (emotes, badges, profile pictures) are cached so they are not downloaded again.</li>
+          <li><strong>Technical logs</strong> may contain channel and user names, but never message texts or login keys.</li>
+        </ul>
+
+        <h2>Who receives the data</h2>
+        <p>No one besides YouTube and Twitch themselves. Vitrage sends them only what the actions above require. The chat overlay receives messages from Vitrage directly on your computer (address 127.0.0.1) and sends nothing to the internet. The webcam is used only for the preview on your screen and is never transmitted.</p>
+
+        <h2>Deleting your data and revoking access</h2>
+        <ul>
+          <li>The «Выйти» (Log out) button on the «Чат» (Chat) page revokes access at Google or Twitch and deletes the keys from your computer.</li>
+          <li>You can also revoke access without Vitrage: on your Google Account's <a href="https://myaccount.google.com/connections">Third-party apps &amp; services</a> page, or in <a href="https://www.twitch.tv/settings/connections">Twitch connections settings</a>.</li>
+          <li>Deleting the <code>data</code> folder erases everything Vitrage stored.</li>
+        </ul>
+
+        <h2>YouTube and Google services</h2>
+        <p>Vitrage uses YouTube API Services. By logging in to YouTube in Vitrage, you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Data processed by Google is subject to the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+        <p>Vitrage's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+        <h2>Children</h2>
+        <p>Vitrage is not intended for children under 13 and does not knowingly collect their data.</p>
+
+        <h2>Changes and contact</h2>
+        <p>If this policy changes, the new version appears on this page with a new date. Questions: <a href="mailto:madenovartur@gmail.com">madenovartur@gmail.com</a>.</p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site">
+    <div class="wrap">
+      <span>© 2026 Витраж (Vitrage)</span>
+      <a href="./">Главная / Home</a>
+    </div>
+  </footer>
+</body>
+</html>

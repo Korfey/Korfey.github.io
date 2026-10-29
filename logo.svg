@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- «Витраж» (stained glass): a lancet window of leaded glass in the brand colours (violet #8B5CF6, magenta #E040FB,
+       blue #3B82F6) around a bright rose. Large sizes (128 px and up). tools/make-icon.ps1 renders it. -->
+  <defs>
+    <clipPath id="window">
+      <path d="M36,242 V130 A115,115 0 0 1 128,17.32 A115,115 0 0 1 220,130 V242 Z" />
+    </clipPath>
+    <linearGradient id="magenta" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F57CFF" /><stop offset="1" stop-color="#C026D3" />
+    </linearGradient>
+    <linearGradient id="violet" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#A78BFA" /><stop offset="1" stop-color="#6D28D9" />
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#60A5FA" /><stop offset="1" stop-color="#1D4ED8" />
+    </linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#A5C8FF" /><stop offset="1" stop-color="#3B82F6" />
+    </linearGradient>
+    <radialGradient id="rose" cx="0.42" cy="0.38" r="0.7">
+      <stop offset="0" stop-color="#FFFFFF" /><stop offset="0.45" stop-color="#FAD7FF" /><stop offset="1" stop-color="#E879F9" />
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.32" /><stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#window)">
+    <rect x="0" y="0" width="128" height="150" fill="url(#magenta)" />
+    <rect x="128" y="0" width="128" height="150" fill="url(#violet)" />
+    <path d="M36,150 H128 V242 Z" fill="url(#sky)" />
+    <path d="M36,150 V242 H128 Z" fill="url(#blue)" />
+    <path d="M128,150 H220 L128,242 Z" fill="url(#magenta)" />
+    <path d="M220,150 V242 H128 Z" fill="url(#violet)" />
+    <circle cx="128" cy="92" r="38" fill="url(#rose)" />
+    <rect x="0" y="0" width="256" height="256" fill="url(#sheen)" />
+  </g>
+  <g fill="none" stroke="#1A1530" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M36,150 L128,242 L220,150" stroke-width="8" />
+    <path d="M128,54 V130 M90,92 H166" stroke-width="6" />
+    <path d="M128,20 V54 M128,130 V242 M36,150 H220" stroke-width="10" />
+    <circle cx="128" cy="92" r="38" stroke-width="10" />
+    <path d="M36,242 V130 A115,115 0 0 1 128,17.32 A115,115 0 0 1 220,130 V242 Z" stroke-width="14" />
+  </g>
+</svg>
