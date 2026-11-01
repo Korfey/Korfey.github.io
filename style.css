@@ -61,7 +61,7 @@ header.site .brand {
 
 header.site .brand img { width: 32px; height: 32px; }
 
-header.site nav { margin-left: auto; display: flex; gap: 16px; font-size: 15px; }
+header.site nav { margin-left: auto; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px; }
 
 .hero { padding: 48px 0 24px; text-align: center; }
 .hero img { width: 112px; height: 112px; }
